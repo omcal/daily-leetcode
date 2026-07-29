@@ -1,2 +1,5 @@
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
+# templates/ holds {{placeholder}} scaffolding that isn't valid Python.
+testpaths = ["problems", "tests"]
+norecursedirs = ["templates", ".git", ".github"]

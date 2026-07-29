@@ -1,0 +1,72 @@
+name: Streak Reminder
+
+# Nudges the crew over e-mail + WhatsApp when a full day passes with no solve.
+
+on:
+  schedule:
+    # 21:05 UTC == 00:05 Europe/Istanbul (Turkey is on permanent UTC+3).
+    # Runs just after midnight local time, so the day that just ended is judged.
+    - cron: "5 21 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Log what would be sent without messaging anyone"
+        type: boolean
+        default: true
+      force:
+        description: "Send even if the streak is alive (test the wiring)"
+        type: boolean
+        default: false
+      max_idle_days:
+        description: "Alert when the last solve is older than this many days"
+        default: "1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: streak-reminder
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    # Forks inherit the schedule but have no secrets -- don't let them run.
+    if: github.repository == 'omcal/daily-leetcode'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the streak
+        id: streak
+        env:
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          # Via env, not inline interpolation: a dispatch input is free text
+          # and would otherwise be pasted straight into the shell.
+          MAX_IDLE_DAYS: ${{ inputs.max_idle_days || '1' }}
+        run: |
+          python scripts/check_streak.py \
+            --max-idle-days "$MAX_IDLE_DAYS" \
+            --tz Europe/Istanbul
+
+      - name: Send reminder
+        if: steps.streak.outputs.stale == 'true' || inputs.force
+        env:
+          NOTIFY_RECIPIENTS: ${{ secrets.NOTIFY_RECIPIENTS }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFY_FROM_NAME: LeetCode Streak Bot
+          MESSAGE: ${{ steps.streak.outputs.message }}
+        run: |
+          printf '%s\n' "$MESSAGE" > /tmp/message.txt
+          python scripts/notify.py \
+            --subject "🔴 LeetCode serisi kırıldı" \
+            --body-file /tmp/message.txt \
+            ${{ (inputs.dry_run && '--dry-run') || '' }}
+
+      - name: Streak is alive
+        if: steps.streak.outputs.stale != 'true' && !inputs.force
+        run: echo "Last solve was ${{ steps.streak.outputs.last_date }} — nothing to nag about."
