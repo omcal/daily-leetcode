@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**3 solved** · Easy 3 · Medium 0 · Hard 0  
-**Current streak: 2 days** · longest 2
+**4 solved** · Easy 4 · Medium 0 · Hard 0  
+**Current streak: 3 days** · longest 3
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -17,6 +17,7 @@ _No curated lists yet._
 |---|-------|------------|------|------|
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | array, hash-table | 2026-07-28 |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | math | 2026-07-28 |
+| 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | array, binary-search | 2026-07-30 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation | 2026-07-29 |
 <!-- PROBLEMS_TABLE_END -->
 
