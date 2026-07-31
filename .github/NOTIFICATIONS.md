@@ -78,13 +78,18 @@ Repo → **Actions → Streak Reminder → Run workflow**:
 - `force: true` → seri kırılmamış olsa bile mesajı üretir. Gerçek gönderim için
   `dry_run`'ı `false` yapın.
 
-Yerelden de çalıştırabilirsiniz:
+Yerelden de test edebilirsiniz. Secret'a yapıştırmadan önce JSON'ı doğrulamak
+ve kimin bilgilendirileceğini görmek için:
 
 ```bash
-NOTIFY_RECIPIENTS='[{"name":"Ben","email":"ben@example.com"}]' \
-  python scripts/check_streak.py --today 2026-08-01 2>&1 >/dev/null \
-  | tail -n +3 \
-  | python scripts/notify.py --subject "test" --body - --dry-run
+NOTIFY_RECIPIENTS='[{"name":"Ben","email":"ben@example.com"}]' python scripts/notify.py --subject test --body test --dry-run
+```
+
+Mesaj üretiminden gönderime kadar tam zincir (`--today` ile seri kırılmış gibi
+davranır, gerçek tarihe dokunmaz):
+
+```bash
+python scripts/check_streak.py --today 2026-12-31 --message-only | NOTIFY_RECIPIENTS='[{"name":"Ben","email":"ben@example.com"}]' python scripts/notify.py --subject "test" --body - --dry-run
 ```
 
 ## Ayarlanabilir şeyler

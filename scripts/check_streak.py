@@ -133,6 +133,8 @@ def main():
                         help="Override today's date as YYYY-MM-DD (for testing)")
     parser.add_argument("--repo-url", default=os.environ.get("REPO_URL", ""),
                         help="Link appended to the reminder message")
+    parser.add_argument("--message-only", action="store_true",
+                        help="Print just the reminder text, for piping into notify.py")
     args = parser.parse_args()
 
     if args.max_idle_days < 0:
@@ -150,6 +152,11 @@ def main():
     message = render_message(result, args.repo_url)
 
     write_github_output(result, message)
+
+    if args.message_only:
+        print(message)
+        return
+
     print(json.dumps(result, ensure_ascii=False, indent=2))
     print(f"\n--- message ---\n{message}", file=sys.stderr)
 
