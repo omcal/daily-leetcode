@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**5 solved** · Easy 4 · Medium 1 · Hard 0  
-**Current streak: 4 days** · longest 4
+**6 solved** · Easy 5 · Medium 1 · Hard 0  
+**Current streak: 5 days** · longest 5
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -17,6 +17,7 @@ _No curated lists yet._
 |---|-------|------------|------|------|
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | array, hash-table | 2026-07-28 |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | math | 2026-07-28 |
+| 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | array, string, trie | 2026-08-01 |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | array, hash-table, matrix | 2026-07-31 |
 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | array, binary-search | 2026-07-30 |
 | 1929 | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | Easy | array, simulation | 2026-07-29 |
