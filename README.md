@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**8 solved** · Easy 6 · Medium 2 · Hard 0  
-**Current streak: 2 days** · longest 5
+**9 solved** · Easy 7 · Medium 2 · Hard 0  
+**Current streak: 3 days** · longest 5
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -19,6 +19,7 @@ _No curated lists yet._
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | math | 2026-07-28 |
 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | array, string, trie | 2026-08-01 |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium | array, hash-table, matrix | 2026-07-31 |
+| 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | bit-manipulation, divide-and-conquer | 2026-08-05 |
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | array, breadth-first-search, depth-first-search, matrix, union-find | 2026-08-04 |
 | 0682 | [Baseball Game](https://leetcode.com/problems/baseball-game/) | Easy | array, simulation, stack | 2026-08-03 |
 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | array, binary-search | 2026-07-30 |
