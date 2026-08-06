@@ -43,14 +43,6 @@ def list_progress(data, solved_by_number):
     return len(numbers & set(solved_by_number)), len(numbers)
 
 
-def off_list_solves(lists, solved_by_number):
-    """Solved problems that appear in no curated list, newest first."""
-    listed = {p["number"] for data in lists for p in data["problems"]}
-    return [
-        row for number, row in sorted(solved_by_number.items()) if number not in listed
-    ]
-
-
 def render_list_markdown(data, solved_by_number) -> str:
     """Render one list to its own markdown page, ticking off what's solved."""
     done, total = list_progress(data, solved_by_number)
@@ -98,9 +90,6 @@ def build_lists_block(lists, solved_by_number) -> str:
             f"{done}/{total} ({percent(done, total)}%)"
         )
 
-    extra = off_list_solves(lists, solved_by_number)
-    if extra:
-        blocks.append(f"_Plus {len(extra)} solved outside the list.")
     return "\n\n".join(blocks) + "\n"
 
 

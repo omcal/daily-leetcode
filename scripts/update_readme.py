@@ -3,7 +3,7 @@
 Regenerate README.md with solve stats and a table of every solved problem.
 
 Scans problems/*/notes.md for YAML frontmatter (number, title,
-difficulty, tags, date, url), computes a streak + tag breakdown,
+difficulty, date, url), computes a streak + tag breakdown,
 and writes them into README.md between marker comments, leaving
 the rest of the README untouched.
 
@@ -13,6 +13,7 @@ Usage:
 Tip: wire this into a git pre-commit hook or a GitHub Action so
 the stats never go stale.
 """
+
 import datetime
 import re
 from pathlib import Path
@@ -61,16 +62,18 @@ def collect_problems():
         meta = parse_frontmatter(notes.read_text(encoding="utf-8"))
         if not meta.get("number"):
             continue
-        rows.append({
-            "number": int(meta.get("number", 0)),
-            "title": meta.get("title", folder.name),
-            "difficulty": meta.get("difficulty", "Unknown"),
-            "tags": meta.get("tags", []),
-            "date": meta.get("date", ""),
-            "url": meta.get("url", ""),
-            "folder": f"{PROBLEMS_DIR.name}/{folder.name}",
-        })
-    rows.sort(key=lambda r: r["number"])
+        rows.append(
+            {
+                "number": int(meta.get("number", 0)),
+                "title": meta.get("title", folder.name),
+                "difficulty": meta.get("difficulty", "Unknown"),
+                "date": meta.get("date", ""),
+                "url": meta.get("url", ""),
+                "folder": f"{PROBLEMS_DIR.name}/{folder.name}",
+            }
+        )
+    # Sort by date first, then fallback to problem number
+    rows.sort(key=lambda r: (r["date"], r["number"]))
     return rows
 
 
@@ -127,12 +130,16 @@ def build_stats(rows) -> str:
     current, longest = compute_streaks(dates)
 
     lines = [
-        f"**{len(rows)} solved** · Easy {counts['Easy']} · Medium {counts['Medium']} · Hard {counts['Hard']}  ",
+        f"**{len(rows)} solved** · 🟢 {counts['Easy']} · 🟡 {counts['Medium']} · 🔴 {counts['Hard']}  ",
     ]
     if current > 0:
-        lines.append(f"**Current streak: {current} day{'s' if current != 1 else ''}** · longest {longest}")
+        lines.append(
+            f"**Current streak: {current} day{'s' if current != 1 else ''}** · longest {longest} 🔥"
+        )
     else:
-        lines.append(f"Streak's cold — longest run was {longest} day{'s' if longest != 1 else ''}. Solve one today.")
+        lines.append(
+            f"Streak's cold — longest run was {longest} day{'s' if longest != 1 else ''}. 🥶"
+        )
 
     return "\n".join(lines) + "\n"
 
@@ -141,14 +148,18 @@ def build_table(rows) -> str:
     if not rows:
         return "_No problems solved yet._\n"
 
+    # Shifted Date to be the first column
     lines = [
-        "| # | Title | Difficulty | Tags | Date |",
-        "|---|-------|------------|------|------|",
+        "| Date | # | Title | Difficulty |",
+        "|------|---|-------|------------|",
     ]
+    diff_map = {"Easy": "🟢", "Medium": "🟡", "Hard": "🔴"}
     for r in rows:
         title_cell = f"[{r['title']}]({r['url']})" if r["url"] else r["title"]
-        tags = ", ".join(r["tags"]) if isinstance(r["tags"], list) else r["tags"]
-        lines.append(f"| {r['number']:04d} | {title_cell} | {r['difficulty']} | {tags} | {r['date']} |")
+        diff_emoji = diff_map.get(r['difficulty'], r['difficulty'])
+        lines.append(
+            f"| {r['date']} | {r['number']:04d} | {title_cell} | {diff_emoji} |"
+        )
     return "\n".join(lines) + "\n"
 
 
@@ -174,17 +185,21 @@ def update_readme(rows):
         content = (
             f"# LeetCode Solutions\n\n"
             f"{STATS_START}\n{STATS_END}\n\n"
-            f"{LISTS_START}\n{LISTS_END}\n\n"
             f"{TABLE_START}\n{TABLE_END}\n"
+            f"{LISTS_START}\n{LISTS_END}\n\n"
         )
 
     solved_by_number = {r["number"]: r for r in rows}
     lists = problem_lists.load_lists()
 
     content = replace_block(content, STATS_START, STATS_END, build_stats(rows))
-    content = replace_block(content, LISTS_START, LISTS_END,
-                            problem_lists.build_lists_block(lists, solved_by_number))
     content = replace_block(content, TABLE_START, TABLE_END, build_table(rows))
+    content = replace_block(
+        content,
+        LISTS_START,
+        LISTS_END,
+        problem_lists.build_lists_block(lists, solved_by_number),
+    )
 
     README_PATH.write_text(content, encoding="utf-8")
 
