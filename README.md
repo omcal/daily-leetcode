@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**10 solved** · 🟢 7 · 🟡 3 · 🔴 0  
-**Current streak: 4 days** · longest 5 🔥
+**11 solved** · 🟢 7 · 🟡 4 · 🔴 0  
+**Current streak: 5 days** · longest 5 🔥
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -25,6 +25,7 @@ _No curated lists yet._
 | 2026-08-04 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | 🟡 |
 | 2026-08-05 | 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | 🟢 |
 | 2026-08-06 | 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 |
+| 2026-08-07 | 0015 | [3Sum](https://leetcode.com/problems/3sum/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Otomasyon
