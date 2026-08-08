@@ -4,7 +4,7 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**13 solved** · 🟢 9 · 🟡 4 · 🔴 0  
+**14 solved** · 🟢 9 · 🟡 5 · 🔴 0  
 **Current streak: 6 days** · longest 6 🔥
 <!-- STATS_END -->
 
@@ -26,6 +26,7 @@ _No curated lists yet._
 | 2026-08-05 | 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | 🟢 |
 | 2026-08-06 | 0003 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | 🟡 |
 | 2026-08-07 | 0015 | [3Sum](https://leetcode.com/problems/3sum/) | 🟡 |
+| 2026-08-08 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟡 |
 | 2026-08-08 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟢 |
 | 2026-08-08 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 |
 <!-- PROBLEMS_TABLE_END -->
