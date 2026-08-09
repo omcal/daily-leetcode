@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**14 solved** · 🟢 9 · 🟡 5 · 🔴 0  
-**Current streak: 6 days** · longest 6 🔥
+**15 solved** · 🟢 9 · 🟡 6 · 🔴 0  
+**Current streak: 7 days** · longest 7 🔥
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -29,6 +29,7 @@ _No curated lists yet._
 | 2026-08-08 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 🟡 |
 | 2026-08-08 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟢 |
 | 2026-08-08 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 |
+| 2026-08-09 | 0128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Otomasyon
