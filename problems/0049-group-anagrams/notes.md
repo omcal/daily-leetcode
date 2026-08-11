@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/group-anagrams/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Key each word by its sorted letters; anagrams collide on the same key.
+Return the buckets.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n * k log k) for k = word length
+- Space: O(n * k)

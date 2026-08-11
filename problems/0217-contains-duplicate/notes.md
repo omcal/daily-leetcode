@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/contains-duplicate/
 
 ## Approach
 
-<!-- Describe your approach here -->
+A set drops duplicates, so a shorter set than the list means there was
+at least one.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)

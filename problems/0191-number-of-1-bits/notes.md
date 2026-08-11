@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/number-of-1-bits/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Brian Kernighan: `n &= n - 1` clears the lowest set bit. Count the
+iterations until n is zero.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(set bits)
+- Space: O(1)

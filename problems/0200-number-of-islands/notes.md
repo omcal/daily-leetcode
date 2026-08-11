@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/number-of-islands/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Scan the grid; on an unvisited '1', increment the count and DFS in four
+directions, marking cells visited so the whole island is consumed at once.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(r * c)
+- Space: O(r * c) for the visited set and recursion

@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/unique-paths/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Bottom-up DP over one row: `paths[j] = right + below`. Iterate the row
+right-to-left m-1 times, keeping only the previous row.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(m * n)
+- Space: O(n)

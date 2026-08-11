@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/longest-consecutive-sequence/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Put everything in a set. Only start counting at a sequence *head* - a
+value with no `x - 1` in the set - then walk upward. Each element is
+visited at most twice.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)

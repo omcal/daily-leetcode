@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/binary-search/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Standard binary search on the sorted array. `mid = l + (r - l) // 2`
+avoids overflow; move the boundary past mid each step. Return -1 if the
+range empties.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(log n)
+- Space: O(1)

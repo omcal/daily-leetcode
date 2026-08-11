@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/longest-substring-without-repeating-character
 
 ## Approach
 
-<!-- Describe your approach here -->
+Sliding window with a set of the characters currently inside it. Extend
+right; while the new char is already in the set, shrink from the left.
+Track the largest window size.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(min(n, alphabet))

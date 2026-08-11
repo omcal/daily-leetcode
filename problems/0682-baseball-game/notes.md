@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/baseball-game/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Stack of recorded scores plus a running total. `+` pushes the sum of the
+top two, `D` pushes double the top, `C` pops and subtracts; numbers are
+pushed as-is. Adjust the total on every operation.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)

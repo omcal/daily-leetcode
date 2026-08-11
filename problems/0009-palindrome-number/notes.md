@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/palindrome-number/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Negatives are never palindromes. Otherwise stringify and compare the
+i-th character with its mirror from the end.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(d) for d digits
+- Space: O(d) for the string

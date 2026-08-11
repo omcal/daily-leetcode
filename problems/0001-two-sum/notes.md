@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/two-sum/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Scan once, keeping a hash map of value -> index. For each `num`, check
+whether `target - num` was already seen; if so the pair is found.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)

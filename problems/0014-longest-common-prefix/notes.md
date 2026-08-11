@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/longest-common-prefix/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Vertical scan: walk column i over every string. Stop as soon as some
+string is exhausted or disagrees with `strs[0][i]`; the collected chars
+are the prefix.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n * m), m = prefix length
+- Space: O(m)

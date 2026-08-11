@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/3sum/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Sort, then fix each `nums[i]` and two-pointer over the rest for the pair
+summing to `-nums[i]`. Skip duplicate anchors and duplicate left values
+so each triplet is emitted once.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n^2)
+- Space: O(1) beyond the sort and output

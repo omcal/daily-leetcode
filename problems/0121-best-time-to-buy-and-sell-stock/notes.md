@@ -9,9 +9,10 @@ url: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Track the cheapest price seen so far; at each day the best profit is
+`price - minSoFar`. Keep the running maximum.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(1)

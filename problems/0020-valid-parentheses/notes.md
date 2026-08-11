@@ -9,9 +9,11 @@ url: https://leetcode.com/problems/valid-parentheses/
 
 ## Approach
 
-<!-- Describe your approach here -->
+Push the *expected* closing bracket whenever an opener is seen. On a
+closer, it must equal the top of the stack. Valid iff nothing is left
+over at the end.
 
 ## Complexity
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)
