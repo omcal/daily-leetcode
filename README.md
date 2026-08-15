@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**17 solved** · 🟢 10 · 🟡 7 · 🔴 0  
-**Current streak: 9 days** · longest 9 🔥
+**19 solved** · 🟢 10 · 🟡 9 · 🔴 0  
+**Current streak: 1 day** · longest 9 🔥
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -30,8 +30,10 @@ _No curated lists yet._
 | 2026-08-08 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟢 |
 | 2026-08-08 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | 🟢 |
 | 2026-08-09 | 0128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | 🟡 |
+| 2026-08-09 | 0347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | 🟡 |
 | 2026-08-10 | 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟡 |
 | 2026-08-11 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 |
+| 2026-08-15 | 0155 | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Otomasyon
