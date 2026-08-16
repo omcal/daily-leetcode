@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**19 solved** · 🟢 10 · 🟡 9 · 🔴 0  
-**Current streak: 1 day** · longest 9 🔥
+**20 solved** · 🟢 10 · 🟡 10 · 🔴 0  
+**Current streak: 2 days** · longest 9 🔥
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -34,6 +34,7 @@ _No curated lists yet._
 | 2026-08-10 | 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 🟡 |
 | 2026-08-11 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 |
 | 2026-08-15 | 0155 | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟡 |
+| 2026-08-16 | 0739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Otomasyon
