@@ -4,8 +4,8 @@
 [![Streak Reminder](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml/badge.svg)](https://github.com/omcal/daily-leetcode/actions/workflows/streak-reminder.yml)
 
 <!-- STATS_START -->
-**20 solved** · 🟢 10 · 🟡 10 · 🔴 0  
-**Current streak: 2 days** · longest 9 🔥
+**21 solved** · 🟢 10 · 🟡 11 · 🔴 0  
+**Current streak: 3 days** · longest 9 🔥
 <!-- STATS_END -->
 
 <!-- LISTS_START -->
@@ -35,6 +35,7 @@ _No curated lists yet._
 | 2026-08-11 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 |
 | 2026-08-15 | 0155 | [Min Stack](https://leetcode.com/problems/min-stack/) | 🟡 |
 | 2026-08-16 | 0739 | [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | 🟡 |
+| 2026-08-17 | 0153 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | 🟡 |
 <!-- PROBLEMS_TABLE_END -->
 
 ## Otomasyon
